@@ -51,5 +51,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     config: dict = load_config(args.config)
+    assert config["type"] == "baseline", "Incorrect Config Type"
 
     run_baseline(config)

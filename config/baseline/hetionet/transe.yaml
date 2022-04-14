@@ -1,3 +1,5 @@
+type: baseline
+
 dataset: Hetionet
 
 model: 
