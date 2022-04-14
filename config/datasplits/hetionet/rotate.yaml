@@ -1,0 +1,22 @@
+type: dataset_repeat
+
+dataset: Hetionet
+
+model: 
+  name: RotatE
+  embedding_dim: 200
+
+optimizer:
+  class: Adagrad
+  lr: 0.02
+
+train:
+  loss_function: MarginRankingLoss
+  num_epoch: 500
+  num_negative: 1
+  create_inverse: False
+
+save:
+  path: ~/kgem_in_drug_discovery_result/data_repeats/rotate_hetionet
+
+seed: 42
