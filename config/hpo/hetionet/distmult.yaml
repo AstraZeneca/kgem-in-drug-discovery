@@ -1,0 +1,39 @@
+type: hpo
+
+dataset: Hetionet
+
+model: 
+  name: DistMult
+  embedding_dim: 50
+
+optimizer:
+  class: Adagrad
+
+train:
+  loss_function: MarginRankingLoss
+  create_inverse: False
+
+hpo:
+  ntrials: 100
+  sampler: tpe
+  emb:
+    low: 16
+    high: 512
+    step: 16
+  num_epochs:
+    low: 100
+    high: 1000
+    step: 100
+  lr:
+    low: 0.001
+    high: 0.1
+  neg:
+    low: 1
+    high: 101
+    step: 10
+
+save:
+  study_name: distmult_hetionet_hpo_tpe
+  path: ~/kgem_in_drug_discovery_result/distmult_hetionet_hpo_tpe
+
+seed: 42
