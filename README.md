@@ -65,6 +65,15 @@ $ python src/hpo.py -c config/hpo/hetionet/rotate.yaml
 ```
 Where both the dataset and model can be chosen from those available. Note that by default we use the TPE search method, however a random search can also be used by changing the value for the sampler configuration option in the YAML files.
 
+#### Task Specific HPO
+
+The previous experiment optimised the hyperparameters across all relation types. In these experiments, we optimise over only edges between gene and disease entities. 
+
+```shell
+$ python src/hpo_relation.py -c config/hpo_relation/hetionet/rotate.yaml
+```
+Note that only the Hetionet dataset can be used for these experiments.
+
 ### Model Random Seed Experiments
 
 The model seeds experiments are designed to assess how variations in the random seed used to initialise the model parameters affect predictive performance. As such, ten repeats over different random seeds are performed. The model random seed experiments can each be run as follows:
