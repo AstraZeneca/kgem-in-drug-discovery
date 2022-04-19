@@ -14,16 +14,16 @@ In this work we investigate the predictive performance of five KGE models on two
 
 The models we investigate are: 
 
-- ComplEX
-- DistMult
-- RotatE
-- TransE
-- TransH
+- [ComplEX](https://arxiv.org/abs/1606.06357)
+- [DistMult](https://arxiv.org/abs/1412.6575)
+- [RotatE](https://arxiv.org/abs/1902.10197)
+- [TransE](https://papers.nips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html)
+- [TransH](https://ojs.aaai.org/index.php/AAAI/article/view/8870)
 
 With the following datasets being used:
 
-- Hetionet
-- BioKG
+- [Hetionet](https://het.io)
+- [BioKG](https://github.com/dsi-bdi/biokg)
 
 ## Installation Dependencies
 
@@ -34,6 +34,8 @@ $ pip install -r requirements.txt
 ```
 
 The code relies primarily on the [PyKEEN](https://github.com/pykeen/pykeen) package, which uses [PyTorch](https://pytorch.org/) behind the scenes for gradient computation. If you are planning to retrain the models, instead of using the pretrained weight file provided as part of this repository, it would be advisable to ensure you install a GPU enabled version of PyTorch first. Details on how to do this are provided [here](https://pytorch.org/get-started/locally/).
+
+Note that all of the models and both of the datasets are provided as part of the the PyKEEN package so there is no need to download the datasets separately.
 
 ## Reproducing Experiments 
 
