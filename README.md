@@ -45,7 +45,7 @@ Note that all of the models and both of the datasets are provided as part of the
 
 This repository contains code to replicate the experiments detailed in the accompanying manuscript. Each experiment is run by using the combination of a python scrip and associated YAML configuration file. The general format of this is *experiment.py* with the path to the config file providing the remaining information in the format : *experiment/dataset/model*.
 
-We now provide examples of running each experiment.
+We now provide examples of running each experiment. Please note that the results of these experiments will be saved in the **results** directory at the root of this repository.
 
 ### Baseline Experiments
 
@@ -91,6 +91,14 @@ These experiments are designed to assess how changes in the train/test split in 
 $ python src/dataset_repeats.py -c config/datasplits/hetionet/rotate.yaml
 ```
 Where both the dataset and model can be chosen from those available.
+
+### Ablation Experiments
+
+In these experiments, we investigate how the training setup (loss function, optimizer and use of inverse relations) can impact predictive performance. Please note this this experiment will run the repeats over all models and datasets from a single script - thus there is no need to specify a specific model or dataset choice.
+
+```shell
+$ python src/ablation.py
+```
 
 ## Citation
 
