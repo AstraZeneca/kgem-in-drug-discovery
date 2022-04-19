@@ -56,6 +56,15 @@ $ python src/baseline.py -c config/baseline/hetionet/rotate.yaml
 ```
 Where both the dataset and model can be chosen from those available.
 
+### Hyper-Parameter Optimisation Experiments
+
+The HPO experiments will perform 100 repeats to find the optimal hyper parameters for a given dataset and model combination. The HPO experiments can each be run as follows:
+
+```shell
+$ python src/hpo.py -c config/hpo/hetionet/rotate.yaml
+```
+Where both the dataset and model can be chosen from those available. Note that by default we use the TPE search method, however a random search can also be used by changing the value for the sampler configuration option in the YAML files.
+
 ## Citation
 
 Please consider citing the paper for this repo if you find it useful:
