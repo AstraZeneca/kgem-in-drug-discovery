@@ -17,6 +17,6 @@ train:
   create_inverse: False
 
 save:
-  path: ~/kgem_in_drug_discovery_result/baseline/complex_hetionet
+  path: ./results/baseline/complex_hetionet
 
 seed: 42

@@ -34,6 +34,6 @@ hpo:
 
 save:
   study_name: complex_hetionet_hpo_tpe
-  path: ~/kgem_in_drug_discovery_result/hpo_relation/complex_hetionet_tpe
+  path: ./results/hpo_relation/complex_hetionet_tpe
 
 seed: 42

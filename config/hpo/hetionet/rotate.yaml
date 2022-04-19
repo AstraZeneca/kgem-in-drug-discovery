@@ -34,6 +34,6 @@ hpo:
 
 save:
   study_name: rotate_hetionet_hpo_tpe
-  path: ~/kgem_in_drug_discovery_result/hpo/rotate_hetionet_tpe
+  path: ./results/hpo/rotate_hetionet_tpe
 
 seed: 42

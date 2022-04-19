@@ -34,6 +34,6 @@ hpo:
 
 save:
   study_name: distmult_hetionet_hpo_tpe
-  path: ~/kgem_in_drug_discovery_result/hpo_relation/distmult_hetionet_pe
+  path: ./results/hpo_relation/distmult_hetionet_pe
 
 seed: 42

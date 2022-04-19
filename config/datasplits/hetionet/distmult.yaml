@@ -17,6 +17,6 @@ train:
   create_inverse: False
 
 save:
-  path: ~/kgem_in_drug_discovery_result/data_repeats/distmult_hetionet
+  path: ./results/data_repeats/distmult_hetionet
 
 seed: 42

@@ -17,6 +17,6 @@ train:
   create_inverse: False
 
 save:
-  path: ~/kgem_in_drug_discovery_result/baseline/transe_biokg
+  path: ./results/baseline/transe_biokg
 
 seed: 42

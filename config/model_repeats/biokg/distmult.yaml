@@ -17,6 +17,6 @@ train:
   create_inverse: False
 
 save:
-  path: ~/kgem_in_drug_discovery_result/model_repeats/distmult_biokg
+  path: ./results/model_repeats/distmult_biokg
 
 seed: 42
