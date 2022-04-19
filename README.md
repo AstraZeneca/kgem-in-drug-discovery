@@ -29,6 +29,30 @@ With the following datasets being used:
 - [Hetionet](https://het.io)
 - [BioKG](https://github.com/dsi-bdi/biokg)
 
+### HyperParameter Values
+
+Part of this study was a detailed search over the hyperparameter space for all models and across both datasets. Below we report the best overall values below for each dataset. Note that these values are taken from experiments with a fixed training setup consisting of the Adagrad optimiser and the use of Margin Ranking Loss with no inverse relations.
+
+#### **Hetionet**
+
+| **Model** | **Embedding Size** | **Num Epochs** | **Learning Rate** | **Num Negatives** |
+|-----------|--------------------|----------------|-------------------|-------------------|
+| ComplEx   | 272                | 700            | 0.03              | 91                |
+| DistMult  | 80                 | 400            | 0.02              | 41                |
+| RotatE    | 512                | 500            | 0.03              | 41                |
+| TransE    | 304                | 500            | 0.02              | 61                |
+| TransH    | 480                | 800            | 0.005             | 1                 |
+
+#### **BioKG**
+
+| **Model** | **Embedding Size** | **Num Epochs** | **Learning Rate** | **Num Negatives** |
+|-----------|--------------------|----------------|-------------------|-------------------|
+| ComplEx   | 464                | 600            | 0.09              | 91                |
+| DistMult  | 480                | 100            | 0.05              | 71                |
+| RotatE    | 448                | 900            | 0.06              | 31                |
+| TransE    | 448                | 600            | 0.1               | 91                |
+| TransH    | 368                | 900            | 0.06              | 31                |
+
 ## Installation Dependencies
 
 The dependencies required to run the notebooks can be installed as follows:
