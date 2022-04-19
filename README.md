@@ -8,6 +8,23 @@
 
 This repository accompanies our paper [Understanding the Performance of Knowledge Graph Embeddings in Drug Discovery](https://arxiv.org/abs/2105.10488) and enables replication of the key results.
 
+## Overview
+
+In this work we investigate the predictive performance of five KGE models on two public drug discovery-oriented KGs. Our goal is not to focus on the best overall model or configuration, instead we take a deeper look at how performance can be affected by changes in the training setup, choice of hyperparameters, model parameter initialisation seed and different splits of the datasets. Our results highlight that these factors have significant impact on performance and can even affect the ranking of models. Indeed these factors should be reported along with model architectures to ensure complete reproducibility and fair comparisons of future work, and we argue this is critical for the acceptance of use, and impact of KGEs in a biomedical setting.
+
+The models we investigate are: 
+
+- ComplEX
+- DistMult
+- RotatE
+- TransE
+- TransH
+
+With the following datasets being used:
+
+- Hetionet
+- BioKG
+
 ## Installation Dependencies
 
 The dependencies required to run the notebooks can be installed as follows:
@@ -18,6 +35,20 @@ $ pip install -r requirements.txt
 
 The code relies primarily on the [PyKEEN](https://github.com/pykeen/pykeen) package, which uses [PyTorch](https://pytorch.org/) behind the scenes for gradient computation. If you are planning to retrain the models, instead of using the pretrained weight file provided as part of this repository, it would be advisable to ensure you install a GPU enabled version of PyTorch first. Details on how to do this are provided [here](https://pytorch.org/get-started/locally/).
 
+## Reproducing Experiments 
+
+This repository contains code to replicate the experiments detailed in the accompanying manuscript. Each experiment is run by using the combination of a python scrip and associated YAML configuration file. The general format of this is *experiment.py* with the path to the config file providing the remaining information in the format : *experiment/dataset/model*.
+
+We now provide examples of running each experiment.
+
+### Baseline Experiments
+
+The baseline experiments are run using sensible default hyper-parameters and can be used to compare again more optimised values. The baseline experiments can each be run as follows:
+
+```shell
+$ python src/baseline.py -c config/baseline/hetionet/rotate.yaml
+```
+Where both the dataset and model can be chosen from those available.
 
 ## Citation
 

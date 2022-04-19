@@ -1,4 +1,4 @@
-type: baseline
+type: model_repeat
 
 dataset: Hetionet
 
@@ -17,6 +17,6 @@ train:
   create_inverse: False
 
 save:
-  path: ~/kgem_in_drug_discovery_result/baseline/complex_hetionet
+  path: ~/kgem_in_drug_discovery_result/model_repeats/complex_hetionet
 
 seed: 42

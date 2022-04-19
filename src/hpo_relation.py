@@ -7,8 +7,11 @@ from pykeen.hpo import hpo_pipeline
 from utils import load_config
 
 
-def run_hpo(config: dict) -> None:
+def run_hpo_relation(config: dict) -> None:
     """Run a HPO run using the provided config"""
+
+    # Tune the HPO to a limited set of relation types
+    evaluation_relation_whitelist = {"DaG", "DdG", "DuG"}
 
     hpo_pipeline_result = hpo_pipeline(
         study_name=config["save"]["study_name"],
@@ -58,6 +61,7 @@ def run_hpo(config: dict) -> None:
             ),
         ),
         evaluator_kwargs={"filtered": True},
+        evaluation_relation_whitelist=evaluation_relation_whitelist,
     )
 
     hpo_pipeline_result.save_to_directory(config["save"]["path"])
@@ -78,6 +82,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     config: dict = load_config(args.config)
-    assert config["type"] == "hpo", "Incorrect Config Type"
+    assert config["type"] == "hpo_r", "Incorrect Config Type"
 
-    run_hpo(config)
+    run_hpo_relation(config)

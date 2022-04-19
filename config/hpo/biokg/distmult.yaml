@@ -34,6 +34,6 @@ hpo:
 
 save:
   study_name: distmult_biokg_hpo_tpe
-  path: ~/kgem_in_drug_discovery_result/distmult_biokg_hpo_tpe
+  path: ~/kgem_in_drug_discovery_result/hpo/distmult_biokg_tpe
 
 seed: 42

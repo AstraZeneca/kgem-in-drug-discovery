@@ -17,6 +17,6 @@ train:
   create_inverse: False
 
 save:
-  path: ~/kgem_in_drug_discovery_result/transh_hetionet_baseline
+  path: ~/kgem_in_drug_discovery_result/baseline/transh_hetionet
 
 seed: 42

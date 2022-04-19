@@ -1,10 +1,10 @@
-type: baseline
+type: model_repeat
 
 dataset: Hetionet
 
 model: 
-  name: ComplEx
-  embedding_dim: 50
+  name: RotatE
+  embedding_dim: 200
 
 optimizer:
   class: Adagrad
@@ -17,6 +17,6 @@ train:
   create_inverse: False
 
 save:
-  path: ~/kgem_in_drug_discovery_result/baseline/complex_hetionet
+  path: ~/kgem_in_drug_discovery_result/model_repeats/rotate_hetionet
 
 seed: 42

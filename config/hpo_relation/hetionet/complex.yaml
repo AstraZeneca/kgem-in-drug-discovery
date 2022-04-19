@@ -1,9 +1,9 @@
-type: hpo
+type: hpo_r
 
-dataset: BioKG
+dataset: Hetionet
 
 model: 
-  name: RotatE
+  name: ComplEx
   embedding_dim: 50
 
 optimizer:
@@ -33,7 +33,7 @@ hpo:
     step: 10
 
 save:
-  study_name: rotate_biokg_hpo_tpe
-  path: ~/kgem_in_drug_discovery_result/hpo/rotate_biokg_tpe
+  study_name: complex_hetionet_hpo_tpe
+  path: ~/kgem_in_drug_discovery_result/hpo_relation/complex_hetionet_tpe
 
 seed: 42
