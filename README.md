@@ -65,6 +65,24 @@ $ python src/hpo.py -c config/hpo/hetionet/rotate.yaml
 ```
 Where both the dataset and model can be chosen from those available. Note that by default we use the TPE search method, however a random search can also be used by changing the value for the sampler configuration option in the YAML files.
 
+### Model Random Seed Experiments
+
+The model seeds experiments are designed to assess how variations in the random seed used to initialise the model parameters affect predictive performance. As such, ten repeats over different random seeds are performed. The model random seed experiments can each be run as follows:
+
+```shell
+$ python src/model_seed_repeats.py -c config/model_repeats/hetionet/rotate.yaml
+```
+Where both the dataset and model can be chosen from those available.
+
+### Dataset Split Experiments
+
+These experiments are designed to assess how changes in the train/test split in the dataset can affect predictive performance. These experiments can each be run as follows:
+
+```shell
+$ python src/dataset_repeats.py -c config/datasplits/hetionet/rotate.yaml
+```
+Where both the dataset and model can be chosen from those available.
+
 ## Citation
 
 Please consider citing the paper for this repo if you find it useful:
