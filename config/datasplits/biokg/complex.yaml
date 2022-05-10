@@ -1,0 +1,22 @@
+type: dataset_repeat
+
+dataset: BioKG
+
+model: 
+  name: ComplEx
+  embedding_dim: 50
+
+optimizer:
+  class: Adagrad
+  lr: 0.02
+
+train:
+  loss_function: MarginRankingLoss
+  num_epoch: 500
+  num_negative: 1
+  create_inverse: False
+
+save:
+  path: ./results/data_repeats/complex_biokg
+
+seed: 42

@@ -1,0 +1,22 @@
+type: baseline
+
+dataset: Hetionet
+
+model: 
+  name: BioKG
+  embedding_dim: 50
+
+optimizer:
+  class: Adagrad
+  lr: 0.02
+
+train:
+  loss_function: MarginRankingLoss
+  num_epoch: 500
+  num_negative: 1
+  create_inverse: False
+
+save:
+  path: ./results/baseline/transh_biokg
+
+seed: 42
