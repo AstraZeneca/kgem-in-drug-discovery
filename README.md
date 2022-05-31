@@ -1,6 +1,7 @@
 # Knowledge Graph Embedding Models in Drug Discovery
 
 ![Maturity level-1](https://img.shields.io/badge/Maturity%20Level-ML--1-yellow)
+[![DOI:10.1016/j.ailsci.2022.100036](http://img.shields.io/badge/DOI-10.1101/2021.01.08.425840-B31B1B.svg)](https://doi.org/10.1016/j.ailsci.2022.100036)
 [![Arxiv](https://img.shields.io/badge/ArXiv-2105.10488-orange.svg)](https://arxiv.org/abs/2105.10488)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/pykeen)](https://img.shields.io/pypi/pyversions/pykeen)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -10,7 +11,7 @@
   <img width="800" src="https://github.com/AstraZeneca/kgem-in-drug-discovery/raw/master/result.png">
 </p>
 
-This repository accompanies our paper [Understanding the Performance of Knowledge Graph Embeddings in Drug Discovery](https://arxiv.org/abs/2105.10488) and enables replication of the key results.
+This repository accompanies our paper [Understanding the Performance of Knowledge Graph Embeddings in Drug Discovery](https://doi.org/10.1016/j.ailsci.2022.100036) and enables replication of the key results.
 
 ## Overview
 
@@ -129,11 +130,13 @@ $ python src/ablation.py
 Please consider citing the paper for this repo if you find it useful:
 
 ```
-@article{bonner2021understanding,
+@article{bonner2022understanding,
   title={Understanding the performance of knowledge graph embeddings in drug discovery},
   author={Bonner, Stephen and Barrett, Ian P and Ye, Cheng and Swiers, Rowan and Engkvist, Ola and Hoyt, Charles Tapley and Hamilton, William L},
-  journal={arXiv preprint arXiv:2105.10488},
-  year={2021}
+  journal={Artificial Intelligence in the Life Sciences},
+  pages={100036},
+  year={2022},
+  publisher={Elsevier}
 }
 ```
 
