@@ -25,7 +25,7 @@ idna==3.3
 ipython==8.2.0
 jedi==0.18.1
 joblib==1.1.0
-Mako==1.2.0
+Mako==1.2.2
 MarkupSafe==2.1.1
 marshmallow==3.15.0
 marshmallow-enum==1.5.1
