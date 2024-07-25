@@ -72,7 +72,7 @@ tabulate==0.8.9
 threadpoolctl==3.1.0
 tokenize-rt==4.2.1
 tomli==2.0.1
-torch==1.13.1
+torch==2.2.0
 tqdm==4.66.3
 traitlets==5.1.1
 types-PyYAML==6.0.5
